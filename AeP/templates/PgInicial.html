@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Objetos Perdidos</h1>
+  <ul class="list-group">
+    {% for objeto in objetos %}
+      <li class="list-group-item"><a href="objetos/{{objeto.id}}">{{objeto.desc}}</a></li>
+      {% endfor %}
+    </ul>
+{% endblock %}

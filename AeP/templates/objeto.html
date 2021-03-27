@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>{{objeto.title}}</h1>
+  <small>Quem perdeu: {{objeto.author}} no dia: {{objeto.create_date}}</small>
+  <hr>
+  <div>
+    {{objeto.desc | safe}}
+  </div>
+{% endblock %}
