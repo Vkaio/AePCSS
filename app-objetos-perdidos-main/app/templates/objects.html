@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="row align-itens-center">
+    <div class="col"></div>
+    <div class="col-sm-8">
+    <h1 class="text-center">Objetos achados e perdidos</h1>
+    <table class="table">
+        <thead>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Ações</th>
+        </thead>
+        <tbody>
+            {% for obj in objs %}
+            <tr>
+                <th scope="row">{{ obj.id }}</th>
+                <td>{{ obj.name }}</td>
+                <td>{{ obj.description }}</td>
+                <td>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <form method="post">
+    <h2 class="text-center">Adicionar novo objeto</h2>
+    <div class="mb-3">
+        <label for="name" class="form-label">Nome</label>
+        <input type="text" name="name" id="name" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Descrição</label>
+        <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Adicionar</button>
+    </form>
+
+    </div>
+    <div class="col"></div>
+</div>
+{% endblock %}

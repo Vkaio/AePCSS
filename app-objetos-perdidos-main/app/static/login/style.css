@@ -1,0 +1,82 @@
+	/* Coded with love by Mutiullah Samim */
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background: linear-gradient(180deg,  #1c8adb, #0b3655)!important;
+		}
+		.user_card {
+			height: 420px;
+			width: 350px;
+			margin-top: auto;
+			margin-bottom: auto;
+			background: #f3f4f5;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 8px;
+
+		}
+		.brand_logo_container {
+			position: absolute;
+			height: 165px;
+			width: 170px;
+			top: -75px;
+			border-radius: 50%;
+			background: #cdd2d4;
+			padding: 7px;
+			text-align: center;
+		}
+		.brand_logo {
+			height: 150px;
+			width: 150px;
+			border-radius: 50%;
+			border: 2px solid white;
+		}
+		.form_container {
+			margin-top: 100px;
+		}
+		.login_btn {
+			width: 100%;
+			margin-top: 30px;
+			background: #00824a !important;
+			color: white !important;
+		}
+		.login_btn:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.login_btn:hover {
+			background: #006d3e !important;
+		}
+		.login_container {
+			padding: 0 2rem;
+		}
+		.input-group-text {
+			background: #00824a !important;
+			color: rgb(246, 244, 248) !important;
+			border: 0 !important;
+			border-radius: 0.25rem 0 0 0.25rem !important;
+		}
+		.input_user,
+		.input_pass:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.ml-2 {
+			color: #00824a;
+			text-decoration: none !important;
+		}
+		.ml-2:hover{
+			color: #006d3e !important;
+			font-weight: bold !important;
+		}
+		.row{
+			margin-top: 10% !important;
+		}

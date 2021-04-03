@@ -1,0 +1,109 @@
+/* Coded with love by Mutiullah Samim */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(180deg,  #1c8adb, #0b3655)!important;
+}
+.user_card {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: #f3f4f5;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.user_card #title{
+    display: flex;
+    flex-direction: row;
+    height: 12.5%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #00824a;
+}
+.user_card #title h2{
+    color: #ffffff ;
+    font-weight: bold;
+    font-size: 45px;
+    margin-top: 1%;
+    margin-right: 10%;
+    margin-left: 3%;
+}
+.header{
+    display: inline-block;
+    width: 350px;
+    margin-left: 20%;
+    margin-top: 1%;
+}
+.header #login{
+    font-size: 20px;
+    font-weight: bold;
+    color: #00824a;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    margin-top: 1.5%;
+    margin-bottom: 5%;
+    margin-left: 20%;
+}
+.header #login:hover{
+    background-color: #012918c9;
+    border: 2px solid #012918c9;
+}
+.ml-2{
+    color: #ffffff;
+    font-weight: bold ;
+    font-size: 22px;
+    text-decoration: none !important;
+
+}
+.ml-2:hover{
+    color: #012918c9 !important;
+}
+.thumbnail{
+    margin-top: 20% !important;
+    margin-left: 10%;
+    background-color: #ebe8e8;
+}
+.text-center #descricao{
+    max-width: 25ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.thumbnail img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.text-center h3{
+    color: #00824a;
+    font-weight: bold;
+    max-width: 30ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.text-center a{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #00824a;
+    border: 2px solid #00824a;
+}
+.text-center a:hover{
+    background-color: #006d3e;
+    border: 2px solid #006d3e;
+}

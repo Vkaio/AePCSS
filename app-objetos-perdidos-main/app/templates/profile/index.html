@@ -1,0 +1,60 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Achados e Perdidos</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='profile/style.css')}}" rel="stylesheet">
+</head>
+<!--Coded with love by Mutiullah Samim-->
+<body>
+	<div class="container h-100">
+		<div class=" h-100">
+			<div class="user_card theme-showcase">
+				<div id="title">
+                    <h2>{{ session['username'] }}</h2> 
+                    <div class="header">
+                        <a href="{{ url_for('create_object')}}" class="btn btn-primary ml-2">Cadastrar Objeto</a>
+                        <a href="{{ url_for('logout')}}" class="btn btn-danger ml-2">Logout</a>
+                    </div>
+				</div>
+                <div class="row">
+                    {% if objs | length == 0 %}
+                    <div class="d-flex align-content-center flex-wrap">
+                    <p class="text-center">
+                        Nenhum objeto cadastrado! Ir para a <a href="{{ url_for('view_objects') }}">página inicial...</a>
+                    </p></div>
+                    {% else %}
+                    {% for obj in objs %}
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            {% if obj.image_path == '#' %} 
+                                <img src="https://via.placeholder.com/150" alt="objeto-perdido">
+                            {% else %}
+                                <img src="{{ url_for('upload', filename=obj.image_path) }}" alt="objeto-perdido">
+                            {% endif %}
+                            <div class="caption text-center">
+                                <h3>{{ obj.name }}</h3>
+                                <p id="descricao">{{ obj.description }}</p>
+                                <div class="button">
+                                    <p><a href="{{ url_for('update_object', id=obj.id )}}" class="btn btn-primary" role="button" id="alter">Alterar</a> </p>
+                                    <p><a href="{{ url_for('delete_object', id=obj.id )}}" class="btn btn-primary" role="button"id="remove">Remover</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
