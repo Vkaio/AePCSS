@@ -122,9 +122,8 @@ def create_app(test_config=None):
 
     @app.route('/signup', methods=['GET', 'POST'])
     def signup():
-        UserController.create()
-
-#        if request.method == 'POST':
+        if request.method == 'POST':
+            UserController.create()
 #            name = request.form['name']
 #            email = request.form['email']
 #            phone = request.form['phone']
